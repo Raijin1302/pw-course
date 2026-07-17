@@ -1,8 +1,14 @@
 - git init:
 Khởi tạo một kho lưu trữ Git mới (git repository) trong thư mục hiện tại. Các file từ local sẽ được Git theo dõi và chuyển vào "working directory".
+-------------------------------------------------------------
+
 - git add <file_name>:
 Đưa file có tên chỉ định từ vùng làm việc (working directory) vào vùng chuẩn bị (staging area) để chuẩn bị cho lần commit tiếp theo.
+-------------------------------------------------------------
+
 - git add .:
 Đưa toàn bộ các file đang có sự thay đổi trong working directory vào staging area.
+-------------------------------------------------------------
+
 - git commit -m "message":
 Lưu lại một bản chụp (snapshot) các thay đổi đang có trong staging area vào repository kèm theo message mô tả thay đổi đó.
