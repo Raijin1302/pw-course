@@ -1,0 +1,54 @@
+a. Tạo 3 file: file1, file2, file3
+- Vùng local: file1, file2, file3
+- Working directory: Trống
+- Staging area: Trống
+- Repository: Trống
+-------------------------------------------------------------
+
+b. Chạy lệnh: git init
+- Vùng local: Trống (đã được git theo dõi)
+- Working directory: file1 (untracked), file2 (untracked), file3 (untracked)
+- Staging area: Trống
+- Repository: Trống
+-------------------------------------------------------------
+
+c. Chạy lệnh: git commit -m "init project"
+(BẪY: Lệnh này bị lỗi/không có tác dụng vì Staging area đang trống, chưa có file nào được add).
+- Báo lỗi :  "nothing added to commit but untracked files present (use "git add" to track)"
+- Working directory: file1, file2, file3
+- Staging area: Trống
+- Repository: Trống
+-------------------------------------------------------------
+
+d. Chạy lệnh: git add file1
+- Working directory: file2, file3
+- Staging area: file1
+- Repository: Trống
+-------------------------------------------------------------
+
+e. Chạy lệnh: git commit -m "add file1"
+- Working directory: file2, file3
+- Staging area: Trống
+- Repository: đã lưu commit chứa file1
+-------------------------------------------------------------
+
+f.Chạy lệnh: git commit -m "add file"
+(BẪY: Lệnh này tiếp tục không có tác dụng do file2 và file3 vẫn đang ở Working directory, chưa được đưa vào Staging area).
+- Báo lỗi :  "nothing added to commit but untracked files present (use "git add" to track)"
+- Working directory: file2, file3
+- Staging area: Trống
+- Repository: vẫn chỉ chứa file1 từ lần commit trước
+-------------------------------------------------------------
+
+*BONUS :
+
+g. Chạy lệnh: git add .
+- Working directory: Trống (file2 và file3 đã được đưa vào Staging area)
+- Staging area: file2, file3
+- Repository: vẫn chỉ chứa file1 từ lần commit trước
+-------------------------------------------------------------
+
+h. Chạy lệnh: git commit -m "add file2 and file3"
+- Working directory: Trống
+- Staging area: Trống
+- Repository: đã lưu commit chứa file1, file2 và file3
